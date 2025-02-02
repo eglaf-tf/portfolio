@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-
+// service_yvfnrvq
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
 
@@ -22,16 +22,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID, // Your EmailJS Service ID
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID, // Your EmailJS Template ID
         {
-          from_name: form.name,
-          to_name: 'JavaScript Mastery',
-          from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
-          message: form.message,
+          from_name: form.name, // Sender's Name (User Input)
+          to_name: 'Akshit Thakur', // Your Name
+          from_email: form.email, // Sender's Email (User Input)
+          to_email: 'eglaf.tf@gmail.com', // Your Email
+          message: form.message, // Message from User
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY, // Your Public Key
       )
       .then(
         () => {
